@@ -1,0 +1,31 @@
+@mixin button-cta {
+  width: 170px;
+  height: 40px;
+  border: 2px solid $bg-color-ternary;
+  border-radius: 40px;
+  font-size: $font-size-xs;
+  background: $bg-color-secondary;
+  cursor: pointer;
+}
+
+@mixin button-link {
+  display: block;
+  width: 60%;
+  min-width: 170px;
+  padding: 10px;
+  border-radius: 30px;
+  border: 2px solid $bg-color-secondary;
+  text-align: center;
+  font-size: $font-size-xs;
+  color: $bg-color-secondary;
+  background-color: $bg-color-ternary;
+  cursor: pointer;
+}
+
+@mixin info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $bg-color-secondary;
+  border-top: 1px solid $bg-color-primary;
+}

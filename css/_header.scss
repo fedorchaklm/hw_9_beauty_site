@@ -1,0 +1,121 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: $font-size-xs;
+    background-color: $bg-color-primary;
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      color: $color-secondary;
+    }
+  }
+
+  .info {
+    @include info;
+    padding: 0 21%;
+    height: 120px;
+
+    .logo {
+      width: 13.44%;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      &__heading {
+        font-size: $font-size-sm;
+        color: $bg-color-ternary;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+
+    .contacts {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      &__tel {
+        color: $color-primary;
+      }
+
+      &__cta {
+        @include button-cta;
+      }
+    }
+  }
+  &__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 79px;
+    font-size: 1rem;
+    background-color: $bg-color-secondary;
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+      color: $color-primary;
+    }
+  }
+
+  &__sale {
+    display: flex;
+    align-items: center;
+    height: 604px;
+    background-image: url("../images/background_chair.svg");
+    padding-left: 21%;
+
+    .sale {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 48px;
+      width: 17%;
+      height: 219px;
+      color: $bg-color-secondary;
+
+      &__heading {
+        font-size: $font-size-lg;
+        white-space: nowrap;
+      }
+
+      &__content {
+        font-size: $font-size-xs;
+        line-height: 1.4285;
+      }
+
+      &__link {
+        @include button-link;
+        height: 40px;
+      }
+    }
+  }
+}
+
+// media for screens to 1024px
+@media screen and (max-width: 1024px) {
+  .header {
+    .info {
+      padding: 5%;
+    }
+
+    &__sale {
+      padding: 5%;
+
+      .sale__content {
+        width: 150px;
+      }
+    }
+  }
+}
